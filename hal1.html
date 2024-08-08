@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy BirthDay</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff5f5;
+            background-image: url('back.png'); /* Add your background image here */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            width: 320px;
+            background-color: #fff;
+            border: 2px solid #f4c6d6;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .card-header {
+            background-color: #f4c6d6;
+            padding: 10px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-header .icons {
+            display: flex;
+            gap: 5px;
+        }
+        .card-header .icons div {
+            width: 15px;
+            height: 15px;
+            background-color: #f78b8b;
+            border-radius: 50%;
+        }
+        .card-header .icons div:last-child {
+            background-color: #f78b8b;
+        }
+        .card-header .title {
+            font-size: 18px;
+            color: #ff7f91;
+            font-weight: bold;
+        }
+        .card-content {
+            margin-top: 20px;
+        }
+        .card-content img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        .card-content p {
+            color: #ff7f91;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .card-footer button {
+            background-color: #ff7f91;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            width: 80px;
+        }
+        .card-footer p {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="icons">
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+            </div>
+            <div class="title">Happy BirthDay Sayang</div>
+            <div class="icons">
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+            </div>
+        </div>
+        <div class="card-content">
+            <img src="bday.gif" alt="Cute Icon"> <!-- Add your image here -->
+            <p>Di hari yang istimewa ini, aku ingin mengingatkanmu betapa bersyukurnya aku memiliki 
+                seseorang seistimewa kamu di hidupku. Setiap detik yang kita lewati bersama adalah anugerah 
+                yang tak ternilai.</p>
+
+            <p>Di hari ulang tahunmu ini, aku berdoa semoga semua impianmu tercapai, semoga kamu selalu dikelilingi 
+                oleh cinta dan kebahagiaan, dan semoga kita bisa terus bersama menghadapi setiap tantangan yang ada 
+                di depan kita.</p>    
+        </div>
+        <div class="card-footer">
+            <button onclick="goToNextPage()">Note</button>
+            <button onclick="goToNextPage1()">Pict</button>
+            <button onclick="goToNextPage2()">Video</button>
+        </div>
+        <div class="card-footer">
+            <p>( Iqbal Heriyadi )</p>
+        </div>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "hal1.html"; // Replace with your next page URL
+        }
+
+        function goToNextPage1() {
+            window.location.href = "hal2.html"; // Replace with your next page URL
+        }
+
+        function goToNextPage2() {
+            window.location.href = "hal3.html"; // Replace with your next page URL
+        }
+    </script>
+
+</body>
+</html>

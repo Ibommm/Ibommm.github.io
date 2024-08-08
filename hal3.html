@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff5f5;
+            background-image: url('back.png'); /* Your background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            width: 350px;
+            background-color: #fff;
+            border: 2px solid #f4c6d6;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .card-header {
+            background-color: #f4c6d6;
+            padding: 10px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-header .icons {
+            display: flex;
+            gap: 5px;
+        }
+        .card-header .icons div {
+            width: 15px;
+            height: 15px;
+            background-color: #ff7f91;
+            border-radius: 50%;
+        }
+        .card-header .title {
+            font-size: 18px;
+            color: #ff7f91;
+            font-weight: bold;
+        }
+        .card-content {
+            position: relative;
+        }
+        .card-content video {
+            width: 100%;
+            height: 300px; /* Set a fixed height for consistent size */
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .card-content .prev, .card-content .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 127, 145, 0.8);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            border-radius: 50%;
+        }
+        .card-content .prev {
+            left: -20px;
+        }
+        .card-content .next {
+            right: -20px;
+        }
+        .card-content p {
+            color: #ff7f91;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .card-footer {
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 10px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .buttons button {
+            background-color: #ff7f91;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="icons">
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+            </div>
+            <div class="title">Happy Birthday Sayang</div>
+            <div class="icons">
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+            </div>
+        </div>
+        <div class="card-content">
+            <video id="card-video" controls>
+                <source src="video1.mp4" type="video/mp4"> <!-- Replace with your video file path -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p>Thank Y♥u For Being My#1 Support System</p>
+        <div class="buttons">
+            <button onclick="goToNextPage()">Note</button>
+            <button onclick="goToNextPage1()">Pict</button>
+            <button onclick="goToNextPage2()">Video</button>
+        </div>
+        <div class="card-footer">
+            Made with ❤️ by [Iqbal Heriyadi]
+        </div>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "hal1.html"; // Replace with your next page URL
+        }
+
+        function goToNextPage1() {
+            window.location.href = "hal2.html"; // Replace with your next page URL
+        }
+
+        function goToNextPage2() {
+            window.location.href = "hal3.html"; // Replace with your next page URL
+        }
+    </script>
+
+</body>
+</html>

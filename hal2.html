@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff5f5;
+            background-image: url('back.png'); /* Your background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            width: 350px;
+            background-color: #fff;
+            border: 2px solid #f4c6d6;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .card-header {
+            background-color: #f4c6d6;
+            padding: 10px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-header .icons {
+            display: flex;
+            gap: 5px;
+        }
+        .card-header .icons div {
+            width: 15px;
+            height: 15px;
+            background-color: #ff7f91;
+            border-radius: 50%;
+        }
+        .card-header .title {
+            font-size: 18px;
+            color: #ff7f91;
+            font-weight: bold;
+        }
+        .card-content {
+            position: relative;
+        }
+        .card-content img {
+            width: 100%;
+            height: 300px; /* Set a fixed height for consistent size */
+            object-fit: cover; /* Ensure the image covers the entire area without distortion */
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .card-content .prev, .card-content .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 127, 145, 0.8);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            border-radius: 50%;
+        }
+        .card-content .prev {
+            left: -20px;
+        }
+        .card-content .next {
+            right: -20px;
+        }
+        .card-content p {
+            color: #ff7f91;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .card-footer {
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 10px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .buttons button {
+            background-color: #ff7f91;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="icons">
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+            </div>
+            <div class="title">Happy Birthday Sayang</div>
+            <div class="icons">
+                <span class="heart">❤️</span>
+                <span class="heart">❤️</span>
+            </div>
+        </div>
+        <div class="card-content">
+            <button class="prev" onclick="previousImage()">&#10094;</button>
+            <img id="card-image" src="image1.jpeg" alt="Image 1"> <!-- Replace with actual image paths -->
+            <button class="next" onclick="nextImage()">&#10095;</button>
+        </div>
+        <p>Mari kita bikin lebih banya kenangan manis dan seru di tahun-tahun ke depannya.</p>
+        <div class="buttons">
+            <button onclick="goToNextPage()">Note</button>
+            <button onclick="goToNextPage1()">Pict</button>
+            <button onclick="goToNextPage2()">Video</button>
+        </div>
+        <div class="card-footer">
+            Made with ❤️ by [Iqbal Heriyadi]
+        </div>
+    </div>
+
+    <script>
+        let currentImage = 0;
+        const images = ['image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.jpeg', 'image5.jpeg']; // Add your image paths
+
+        function nextImage() {
+            currentImage = (currentImage + 1) % images.length;
+            document.getElementById('card-image').src = images[currentImage];
+        }
+
+        function previousImage() {
+            currentImage = (currentImage - 1 + images.length) % images.length;
+            document.getElementById('card-image').src = images[currentImage];
+        }
+
+        function goToNextPage() {
+            window.location.href = "hal1.html"; // Replace with your next page URL
+        }
+
+        function goToNextPage1() {
+            window.location.href = "hal2.html"; // Replace with your next page URL
+        }
+
+        function goToNextPage2() {
+            window.location.href = "hal3.html"; // Replace with your next page URL
+        }
+
+        // Automatically change images every 3 seconds
+        setInterval(nextImage, 3000);
+    </script>
+
+</body>
+</html>
